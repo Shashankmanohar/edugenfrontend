@@ -6,9 +6,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "./components/Navbar";
 import InternalLinks from "./components/InternalLinks";
-import TestimonialCarousel from "./components/TestimonialCarousel";
-import LatestNews from "./components/LatestNews";
-import FAQAccordion from "./components/FAQAccordion";
 import Footer from "./components/Footer";
 import GlobalFAQ from "./components/GlobalFAQ";
 
