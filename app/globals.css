@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #1e293b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-plus-jakarta-sans);
+  --font-mono: var(--font-plus-jakarta-sans);
+  --color-brand-blue: #0F2C59;
+  --color-brand-purple: #250066;
+  --color-brand-purple-hover: #1e0052;
+  --color-brand-orange: #F26A21;
+  --color-brand-orange-hover: #E05A10;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), var(--font-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Global Readability & Accessibility Enhancements */
+
+/* Elevate default paragraphs for better contrast and reading flow */
+p {
+  color: #334155; /* Globally sets body paragraphs to rich slate-700 instead of faint gray */
+  line-height: 1.625 !important; /* Assures a comfortable, relaxed line-height */
+}
+
+/* Elevate secondary text utility colors to pass high contrast standards globally */
+.text-slate-500, .text-gray-500 {
+  color: #475569 !important; /* Upgrades faint 500 gray tones to a highly readable slate-600 */
+}
+
+.text-slate-400, .text-gray-400 {
+  color: #5c6c7f !important; /* Upgrades washed-out 400 gray tones to a solid slate-550 */
+}
+
+.text-slate-600, .text-gray-600 {
+  color: #1e293b !important; /* Upgrades standard 600 gray to rich slate-800 for high-contrast reading */
+}
+
+/* Upgrade light weights to standard normal weight for crisp legibility on all displays */
+.font-light {
+  font-weight: 400 !important; /* Gently upgrades font-light (300) to font-normal (400) */
+}
+
+/* Ensure list items share a comfortable reading spacing */
+li, dt, dd {
+  line-height: 1.6 !important;
+}
+
+/* Structural Design Readability Enhancements */
+
+/* Upgrade visual card borders for high-definition section boundaries */
+.border-slate-100 {
+  border-color: #e2e8f0 !important; /* Upgrades extremely faint slate-100 to slate-200 for crisp visual boundaries */
+}
+
+.border-slate-150, .border-slate-200 {
+  border-color: #cbd5e1 !important; /* Upgrades faint slate-150/200 borders to highly visible slate-300 */
+}
+
+/* Custom premium text selection highlight for smooth scanning/reading */
+::selection {
+  background-color: rgba(242, 106, 33, 0.15); /* Light signature brand-orange highlight */
+  color: #250066; /* Rich brand-purple text */
+}
+
+/* Elegant high-visibility focus indicator for keyboards and screen readers */
+a:focus-visible, button:focus-visible {
+  outline: 2.5px solid #250066 !important;
+  outline-offset: 4px !important;
+}
+
