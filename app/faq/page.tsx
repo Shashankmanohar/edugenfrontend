@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import FAQAccordion from "../components/FAQAccordion";
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions | Edugen World School",
