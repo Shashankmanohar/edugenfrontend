@@ -97,7 +97,7 @@ export default function AdminDashboard() {
     // Load Enquiries from Express REST API
     const loadEnquiries = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/enquiries", {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000"}/api/enquiries`, {
           headers: {
             "Authorization": `Bearer ${token}`
           }
@@ -156,7 +156,7 @@ export default function AdminDashboard() {
     localStorage.setItem("edugen_enquiries", JSON.stringify(updatedEnquiries));
 
     try {
-      const response = await fetch(`http://localhost:5000/api/enquiries/${enquiryId}/status`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000"}/api/enquiries/${enquiryId}/status`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

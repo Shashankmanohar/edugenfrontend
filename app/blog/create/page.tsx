@@ -49,7 +49,7 @@ export default function CreateBlogPost() {
     const token = localStorage.getItem("edugen_admin_token") || "";
 
     try {
-      const response = await fetch("http://localhost:5000/api/blogs/upload", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000"}/api/blogs/upload`, {
         method: "POST",
         headers: {
           "Authorization": `Bearer ${token}`
@@ -150,7 +150,7 @@ export default function CreateBlogPost() {
     // Try publishing to Backend API
     try {
       const token = localStorage.getItem("edugen_admin_token") || "";
-      const response = await fetch("http://localhost:5000/api/blogs", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000"}/api/blogs`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

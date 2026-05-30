@@ -76,7 +76,7 @@ export default function Blog() {
     
     const loadBlogs = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/blogs");
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000"}/api/blogs`);
         if (res.ok) {
           const dbBlogs = await res.json();
           if (dbBlogs && dbBlogs.length > 0) {
